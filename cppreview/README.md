@@ -17,3 +17,5 @@ drwxr-xr-x 10 joshua joshua 4096 Aug 29 14:38 ..
 - registers (16 registers on raspberry pi 32 bit mode)
 - cache - fast memory remembering
 - different layers / levels of cache
+
+arduinos - the uno is accurate to delayMicroseconds(1244); - the 4 microseconds. multiples of 4
