@@ -2,7 +2,18 @@
 #include <ostream>
 #include <stdio.h>
 #include <string>
+#include <BigNum.hh>
 
+BigNum::BigNum(uint64_t v):a_(v) {}
+
+// write in .s file, call it from here
+
+// make the functions and use name mangling to get the same function
+// created in the .s file
+// nm bignum.o
+// g++ -)2 -g -5 bignum.cpp
+
+/*
 class BigNum {
 private:
   int num_;
@@ -66,10 +77,12 @@ public:
     s.write(res.c_str(), res.length);
   }
 };
+*/
 
 int main(void) {
-  BigNum a = BigNum(5);
-  BigNum b = BigNum(10);
-  // std::cout << (a + b).get_num() << std::endl;
+  BigNum a(5);
+  BigNum b(10);
+  BigNum c = a + b;
+  std::cout << c << std::endl;
   return 0;
 }
