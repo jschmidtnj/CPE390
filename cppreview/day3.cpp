@@ -94,10 +94,11 @@ int main() {
 // in a function, the first parameter is r0, then r1, etc.
 // mov r3, #1 @ sets r3 to be equal to 1
 
-// GDB STUFF =========================================================
-
 // g++ -g day3.cpp
 // -O2 turns on optimization
+// -g used for debug stuff
+
+// GDB STUFF =========================================================
 
 // if you want to run a command in the background use `CTRL-Z` and `bg`
 // `ps` shows current processes, `kill -9` kills the process
