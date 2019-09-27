@@ -1,6 +1,6 @@
 [submodule "cpe390"]
 	path = cpe390
 	url = https://github.com/stevensdeptece/cpe390
-[submodule "CPE-390hw"]
-	path = CPE-390hw
-	url = https://github.com/stevensdeptece/CPE-390hw
+[submodule "cpe-390-programminghw-jschmidtnj"]
+	path = cpe-390-programminghw-jschmidtnj
+	url = https://github.com/sit-cpe390-2019s/cpe-390-programminghw-jschmidtnj

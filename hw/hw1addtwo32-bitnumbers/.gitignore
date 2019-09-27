@@ -1,2 +1,4 @@
 # ignore assembly
 *.s
+hw1setup
+!add.s

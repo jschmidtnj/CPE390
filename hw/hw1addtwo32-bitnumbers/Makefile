@@ -7,7 +7,7 @@ hw1setup: hw1.cc cppadd.cc
 	$(CXX) hw1.cc cppadd.cc -o hw1setup
 	g++ -O2 -S hw1.cc
 
-hw1:  hw1.cc add.s
+hw1: hw1.cc add.s
 	$(CXX) hw1.cc add.s -o hw1  #link the two .o files together into a program
 
 clean:
