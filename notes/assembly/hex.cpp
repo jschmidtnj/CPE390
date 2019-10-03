@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdint.h>
 
 using namespace std;
 
@@ -10,4 +11,5 @@ int main() {
   cout << (0xDEAD | 0xBEEF) << '\n'; // OR
   cout << (0xDEAD ^ 0xBEEF) << '\n'; // XOR
   cout << ~0x92CF << '\n'; // NOT
+  cout << (int16_t(int16_t(-32768) + int16_t(-1))) << '\n'; // wraps around to highest number!
 }
