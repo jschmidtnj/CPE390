@@ -16,18 +16,58 @@ eor	r7, r1,r2	// r7 = r1 ^ r2 = 101 | 1011101 = 1011101
 eor	r6, r6,r6	// = 0
 and	r2, r2,r2	// = r2 = 5
 
-// loops
-mov r0, #0
-loop: // do while loop - int i = 0; do {} while (i < 5);
-add r0, #1
-cmp r0, #5
-blt loop
+  // loops
+  mov r0, #0
+loop: // do while loop - int i = 0; do { i++; } while (i < 5);
+  add r0, #1
+  cmp r0, #5
+  blt loop
 
-// for(int i = 1; i < 5; i++) {}
-mov r0, #1
-cmp r0, #5
-bge out
+  // for(int i = 1; i < 5; i++) {}
+  mov r0, #1
+  cmp r0, #5
+  bge out
 loop2:
-add r0, #1
-cmp r0, #5
-blt loop2
+  add r0, #1
+  cmp r0, #5
+  blt loop2
+out:
+
+  mov r0, #0
+loop3:
+  cmp r0, #5
+  bge out2
+  add r0, #1
+  b loop3
+out2:
+
+.L1: .ascii "ABCDEF"
+
+add r0, #3 // immediate mode
+ldr r2, .L1 // gets the data from memory location
+ldrb r1, [r0] // loads A
+add r3, r2, #1 // loads B
+
+
+// add all characters in L1
+  ldr r0, .L1
+  mov r2, #0 // this is the result (sum) (immediate mode)
+.loop3
+  ldrb r1, [r0] // r1 = 'A' the first time
+  cmp r1, #0
+  beq out
+  add r2, r1 // r2 = 0 + 'A'
+  add r0, #1
+  b .loop3
+
+// last character in string is always 0 (null ascii char)
+/*
+int get_sum() {
+  char * msg = "ABCDEF";
+  int sum = 0;
+  for (int i = 0; msg[i] != '\n'; i++) {
+    sum += msg[i];
+  }
+  return sum;
+}
+*/

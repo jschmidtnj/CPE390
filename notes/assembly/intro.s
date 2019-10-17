@@ -5,8 +5,8 @@ _Z1xv: // v means void, colon means define the address is right here
   mov r0, #2 // moves the number 2 to register 0. this is called "immediate mode"
   mov r0, r2 // moves the stuff in r2 to r0. this is called register to register
   mov r1, #7 // can't put stuff higher than 7 into register like this. registers up to r15
-  ldr r2, #=2021 // for loading bigger numbers
-  ldr r9, #=0xFFFFFFFF // hex is 4 bits, 32 bit is 4 bytes
+  ldr r2, =#2021 // for loading bigger numbers
+  ldr r9, =#0xFFFFFFFF // hex is 4 bits, 32 bit is 4 bytes
   // note: in c++, don't use a leading zero (077 is not 77) - this becomes 3 bits (base 8)
   add r0, r1, r2 // r0 = r1 + r2
   add r0, r0, r1 // r0 = r0 + r1
