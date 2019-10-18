@@ -4,4 +4,3 @@ _Z3addii:
   add w0, w0, w1
   ret
   .cfi_endproc
-
