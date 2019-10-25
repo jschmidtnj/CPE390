@@ -1,7 +1,7 @@
 //
 // paper assembler practice: learn the instructions
 // for each instruction write down the value of the register(s) affected next to it
-//
+// word count means number of bits in a register (64 for 64-bit computers)
 
 mov	r0, #2		// example: r0 = 2
 ldr	r1, =#100 // r1 = 100
