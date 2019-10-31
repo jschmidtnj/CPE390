@@ -14,3 +14,11 @@ loop:
   subs r1, #1
   bne loop
   bx lr
+
+// load from and to register
+_Z9loadarrayPKii:
+  .fnstart
+  // r0 = location of the array
+  // r1 = length of the array
+  ldr r2, [r0] // load from location r0 into register r2
+  str r2, [r0] // store from register r2 into memory location [r0]
