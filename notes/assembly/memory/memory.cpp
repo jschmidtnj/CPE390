@@ -1,5 +1,7 @@
+#include <iostream>
+
 // function in memory.s
-extern void f(int array[], int n);
+extern int f(int array[], int n);
 
 int the_sum(int array[], int n) {
   int res = 0;
@@ -10,5 +12,5 @@ int the_sum(int array[], int n) {
 
 int main() {
   int x[] = {6, 4, 3, 2};
-  f(x, sizeof(x) / sizeof(int[0]));
+  std::cout << f(x, 4) << '\n';
 }

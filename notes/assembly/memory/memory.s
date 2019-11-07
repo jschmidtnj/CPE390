@@ -1,4 +1,4 @@
-.global _Z1fpii # pointer to integer
+.global _Z1fpii // pointer to integer
 
 // sum up some integers
 // f(int x[], int n)
