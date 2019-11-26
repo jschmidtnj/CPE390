@@ -14,3 +14,5 @@ Microprocessor Systems
 - NASA suits
 - rgb lights
 - startup
+
+cool website: https://graphics.stanford.edu/~seander/bithacks.html
